@@ -10,9 +10,9 @@ if(!empty($_POST)){
 
     //dit is een voorbeeld array.  Deze waardes moeten erin staan.
     $postArray = [
-        'name' => "Ieniminie",
-        'email' => "ieniminie@sesamstraat.nl",
-        'message' => "Geweldig dit"
+        'name' => $_POST['name'],
+        'email' => $_POST['email'],
+        'message' => $_POST['message']
     ];
 
     $setReaction = Reactions::setReaction($postArray);
@@ -34,9 +34,22 @@ if(!empty($_POST)){
 </head>
 <body>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=twI61ZGDECBr4ums" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        <h2>Hieronder komen reacties</h2>
+        
+                <form method="post">
+                    name: <input type="text" id="name" name="name"><br>
+                    email: <input type="text" id="email" name="email"><br>
+                    comment: <input type="text" id="message" name="message"><br>
+                    <button type="submit" value="Submit">submit</button>
+                </form>
 
-    <h2>Hieronder komen reacties</h2>
-    <p>Maak hier je eigen pagina van aan de hand van de opdracht</p>
+        <?php
+        foreach ($getReactions as $reaction){
+            echo "<p>" . $reaction['name'] . ": " . $reaction ['message'] . "</p>";
+        }
+        ?>
+
 </body>
 </html>
 
