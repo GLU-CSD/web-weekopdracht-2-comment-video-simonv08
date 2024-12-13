@@ -24,5 +24,10 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo $response;
+  $response = json_decode($response);
+}
+
+foreach ($response->results as $results) {
+  // echo $results->title;
+  $poster_path = $results->poster_path;
 }

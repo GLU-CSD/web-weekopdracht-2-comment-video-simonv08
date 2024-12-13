@@ -35,3 +35,7 @@ p {
 strong {
   color: white;
 }
+
+img {
+  width: 75px;
+}
