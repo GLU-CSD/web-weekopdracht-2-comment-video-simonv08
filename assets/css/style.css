@@ -1,0 +1,37 @@
+body {
+  background: #323232;
+}
+
+iframe {
+  border-radius: 10px;
+}
+
+h2 {
+  color: #fff;
+}
+
+p {
+  padding-left: 4px;
+  border: 2px;
+  border-style: solid;
+  border-radius: 5px;
+  width: 500px;
+  color: white;
+}
+
+#name {
+  margin-left: 35px;
+}
+
+#email {
+  margin-left: 35px;
+}
+
+#message {
+  margin-left: 9px;
+  size: dynamic;
+}
+
+strong {
+  color: white;
+}

@@ -35,18 +35,18 @@ if(!empty($_POST)){
 <body>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=twI61ZGDECBr4ums" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         
-        <h2>Hieronder komen reacties</h2>
-        
-                <form method="post">
-                    name: <input type="text" id="name" name="name"><br>
-                    email: <input type="text" id="email" name="email"><br>
-                    comment: <input type="text" id="message" name="message"><br>
-                    <button type="submit" value="Submit">submit</button>
-                </form>
+        <h2>reacties</h2>
+        <hr size="3" > 
+        <form method="post">
+        <strong> name: </strong> <input type="text" id="name" name="name"><br>
+        <strong> email: </strong> <input type="text" id="email" name="email"><br>
+        <strong> comment: </strong> <input type="text" id="message" name="message"><br>
+            <button type="submit" value="Submit">comment</button>
+        </form>
 
         <?php
         foreach ($getReactions as $reaction){
-            echo "<p>" . $reaction['name'] . ": " . $reaction ['message'] . "</p>";
+            echo "<p>" . "<strong>" . $reaction['name']  . "</strong>" . ": " . $reaction ['message'] . "</p>";
         }
         ?>
 
